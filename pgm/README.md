@@ -31,4 +31,4 @@ QuickGraph!
 1) Integrate a graph library
 
 ####################################################################################
-LICENSE: TODO (probably GPL), and another one on demand (contant me for this)
+LICENSE: TODO: probably LGPL3 if compatible, and another one on demand
