@@ -60,6 +60,7 @@
     <Compile Include="Graph.fs" />
     <None Include="README.md" />
     <Compile Include="graph_test.fs" />
+    <Compile Include="core.fs" />
     <Compile Include="Test.fs" />
   </ItemGroup>
   <ItemGroup>

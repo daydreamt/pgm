@@ -1,5 +1,4 @@
 ﻿namespace pgm
-
 (*
 contains the Graph data structures, handles the wrappers with the underlying
  (hopefully blazing fast) graph library. 
@@ -11,19 +10,42 @@ let g = new Graph [List of Edges]
 let g = new Graph [[1; 2]; [4;1], [5;2] ... ]
 let g = new Geaph [[1; 2; 0.1]; [2; 1; 0.3;] ... ]
 
-
 *)
 
+open System
 open QuickGraph
 open System.Collections.Generic
 //QuickGraph.Edge
 module Graph =
 
-    type Vertex(v:'a) = class
+    type Vertex(v:'a, name: string) = 
+        member x.name = name
         member x.v = v
         member x.toQuickVertex() = x.v
-        override x.ToString() = string(x.v)
-    end
+        override x.ToString() = name + " : " + string(x.v)
+
+        override x.Equals(other) =
+            match other with
+            | :? Vertex as vv -> (x.name = vv.name)
+            | _ -> false
+
+        interface System.IComparable with
+            // lexicographical ordering by name
+            member x.CompareTo(other) =
+                match other with 
+                | :? Vertex as sc -> compare (string(x)) (string(sc))
+                | _ -> invalidArg "Vertex" "cannot compare Vertex with that type"
+
+        override x.GetHashCode() =
+            x.toQuickVertex().GetHashCode()
+
+        //interface System.IEquatable with
+            // same value => vertex equality
+        //    member this.Equals(other) = (this.v = other.v && this.name = other.name)
+
+        new(v) = Vertex(name=null, v=v)
+
+    type Vertex<'T> = Vertex of 'T
 
     type Edge(src: Vertex, dst: Vertex) = class
         member x.src = src
