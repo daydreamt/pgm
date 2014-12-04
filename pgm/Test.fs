@@ -508,9 +508,16 @@ module PatternMatching =
 
 
 module Main =
+    let timer = new System.Diagnostics.Stopwatch()
+    
     open pgm_test.graph_test
-    pgm_test.graph_test.simple()
+    
+    timer.Start()
 
+    let _ = pgm_test.graph_test.simple()
+
+
+    printfn "Elapsed Time for grapht tests: %i ms" timer.ElapsedMilliseconds
     [<EntryPoint>]
     let main argv = 
 
