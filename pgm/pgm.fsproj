@@ -59,8 +59,8 @@
     <Compile Include="File1.fs" />
     <Compile Include="Graph.fs" />
     <None Include="README.md" />
-    <Compile Include="graph_test.fs" />
     <Compile Include="core.fs" />
+    <Compile Include="graph_test.fs" />
     <Compile Include="Test.fs" />
   </ItemGroup>
   <ItemGroup>

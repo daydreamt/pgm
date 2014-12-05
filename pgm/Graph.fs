@@ -18,7 +18,13 @@ open System.Collections.Generic
 //QuickGraph.Edge
 module Graph =
 
-    type Vertex(v:'a, name: string) = 
+    // TODO? 
+    type Numeric = 
+        | Int of int
+        | Float of float
+        | Double of double
+
+    type Vertex(name: string, v:double) = 
         member x.name = name
         member x.v = v
         member x.toQuickVertex() = x.v
@@ -39,11 +45,7 @@ module Graph =
         override x.GetHashCode() =
             x.toQuickVertex().GetHashCode()
 
-        //interface System.IEquatable with
-            // same value => vertex equality
-        //    member this.Equals(other) = (this.v = other.v && this.name = other.name)
-
-        new(v) = Vertex(name=null, v=v)
+        new(n) = Vertex(name=n, v=0.0)
 
     type Vertex<'T> = Vertex of 'T
 
@@ -57,11 +59,10 @@ module Graph =
         member x.toUDEdge() = QuickGraph.UndirectedEdge(src.toQuickVertex(), dst.toQuickVertex())
     end
 
-    type WeightedEdge(src: Vertex, dst: Vertex, value: 'a) =
+    type WeightedEdge(src: Vertex, dst: Vertex, value: double) =
         inherit Edge(src, dst)
         member x.value = value
         member x.weighted = true
-
 
     //TODO: Only keep edges and vertices once, namely in the graph and read from there
     type IGraph(vertices: seq<Vertex>, edges: seq<Edge>) =
