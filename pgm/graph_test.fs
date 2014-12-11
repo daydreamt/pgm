@@ -49,4 +49,4 @@ module variable_test =
         let u3 = Uniform(0,5)
         let u4 = UniformCont(0, 5)
 
-        u4.compute()
+        u4.sample()
