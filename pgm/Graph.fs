@@ -15,6 +15,8 @@ let g = new Geaph [[1; 2; 0.1]; [2; 1; 0.3;] ... ]
 open System
 open QuickGraph
 open System.Collections.Generic
+open MathNet.Numerics.Distributions
+
 //QuickGraph.Edge
 module Graph =
 
@@ -45,7 +47,8 @@ module Graph =
         override x.GetHashCode() =
             x.toQuickVertex().GetHashCode()
 
-        new(n) = Vertex(name=n, v=0.0)
+        //new(n:string, v:string) = Vertex(n,v, IDistribution)
+        new(n:string) = Vertex(name=n, v=0.0)
 
     type Vertex<'T> = Vertex of 'T
 

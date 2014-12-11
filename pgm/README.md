@@ -18,17 +18,25 @@ So, that's that.
 
 #####################################################################################
 
+  The library's main idea is that all probabilistic variables can be represented as a node
+in a graphical model. 
+
+
 The main types are Models
 
 ####################################################################################
 Dependencies
 MathNet.Numerics.FSharp
-QuickGraph!
+QuickGraph
 
 
 #######################################################################################
     ROADMAP
-1) Integrate a graph library
+1) Integrate a graph library [4/10]
+2) Allow random variables = Vertices with distributions [active]
+    2.Future) Automatically use the MathNet.Numerics.Distributions?
+3) Make simple factor graphs [3/10]
+Simple Message Passing
 
 ####################################################################################
 LICENSE: TODO: probably LGPL3 if compatible, and another one on demand

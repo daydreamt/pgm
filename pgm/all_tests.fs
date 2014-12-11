@@ -32,7 +32,7 @@ module graph_test =
         let v3 = new Vertex(name="a", v=0.5)
 
         let v4 = new Vertex(name="e", v=1.0)
-        let v5 = new Vertex(0.25, "e")
+        let v5 = new Vertex("e1", 0.25)
 
         let s = [v1;v2;v3]
 
@@ -41,3 +41,12 @@ module graph_test =
 
         let fg = FactorGraph([f1;f2])
         fg
+
+module variable_test = 
+    let distributions() =
+        let u = NormalDist()
+        let u2 = NormalDist(2, 3)
+        let u3 = Uniform(0,5)
+        let u4 = UniformCont(0, 5)
+
+        u4.compute()
