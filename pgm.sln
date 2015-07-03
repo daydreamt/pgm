@@ -1,0 +1,43 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.31101.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "pgm", "pgm\pgm.fsproj", "{CEDF08F8-436D-43A0-8A50-2317DBBA14AF}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{37DAAB10-0192-4FC0-A721-F3FE33EFDC0B}"
+	ProjectSection(SolutionItems) = preProject
+		.nuget\packages.config = .nuget\packages.config
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{7CD60C20-6DA7-4CB9-A58F-180872207385}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|Mixed Platforms = Debug|Mixed Platforms
+		Debug|Win32 = Debug|Win32
+		Debug|x64 = Debug|x64
+		Release|Any CPU = Release|Any CPU
+		Release|Mixed Platforms = Release|Mixed Platforms
+		Release|Win32 = Release|Win32
+		Release|x64 = Release|x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CEDF08F8-436D-43A0-8A50-2317DBBA14AF}.Debug|Any CPU.ActiveCfg = Debug|x86
+		{CEDF08F8-436D-43A0-8A50-2317DBBA14AF}.Debug|Mixed Platforms.ActiveCfg = Debug|x86
+		{CEDF08F8-436D-43A0-8A50-2317DBBA14AF}.Debug|Mixed Platforms.Build.0 = Debug|x86
+		{CEDF08F8-436D-43A0-8A50-2317DBBA14AF}.Debug|Win32.ActiveCfg = Debug|x86
+		{CEDF08F8-436D-43A0-8A50-2317DBBA14AF}.Debug|Win32.Build.0 = Debug|x86
+		{CEDF08F8-436D-43A0-8A50-2317DBBA14AF}.Debug|x64.ActiveCfg = Debug|x64
+		{CEDF08F8-436D-43A0-8A50-2317DBBA14AF}.Release|Any CPU.ActiveCfg = Release|x86
+		{CEDF08F8-436D-43A0-8A50-2317DBBA14AF}.Release|Mixed Platforms.ActiveCfg = Release|x86
+		{CEDF08F8-436D-43A0-8A50-2317DBBA14AF}.Release|Mixed Platforms.Build.0 = Release|x86
+		{CEDF08F8-436D-43A0-8A50-2317DBBA14AF}.Release|Win32.ActiveCfg = Release|x86
+		{CEDF08F8-436D-43A0-8A50-2317DBBA14AF}.Release|Win32.Build.0 = Release|x86
+		{CEDF08F8-436D-43A0-8A50-2317DBBA14AF}.Release|x64.ActiveCfg = Release|x64
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
